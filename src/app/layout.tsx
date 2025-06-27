@@ -11,8 +11,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
             <body className="font-sans">
-                <nav className="bg-gray-100 p-4">
-                    <Link href="/" className="mr-4">Home</Link>
+                <nav className="p-4">
+                    <Link href="/" className="ml-2">Home</Link>
                 </nav>
                 {children}
             </body>

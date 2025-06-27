@@ -42,16 +42,16 @@ type Product = {
 
     return (
         <div className="p-6">
-        <h1 className="text-xl font-bold">{product.title}</h1>
-        <img src={product.image} className="h-48 my-4" alt={product.title} />
-        <p>{product.description}</p>
-        <p className="font-bold mt-2">${product.price}</p>
-        <button
-            onClick={toggleFavorite}
-            className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
-        >
-            {favorite ? "Remove from Favorites" : "Add to Favorites"}
-        </button>
+            <h1 className="text-xl font-bold">{product.title}</h1>
+            <img src={product.image} className="h-48 my-4" alt={product.title} />
+            <p>{product.description}</p>
+            <p className="font-bold mt-2">${product.price}</p>
+            <button
+                onClick={toggleFavorite}
+                className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
+            >
+                {favorite ? "Remove from Favorites" : "Add to Favorites"}
+            </button>
         </div>
     );
 }
