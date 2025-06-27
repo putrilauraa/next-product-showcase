@@ -29,28 +29,28 @@ export default function Home() {
     );
 
     return (
-        <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">Product Showcase</h1>
+        <div className="py-8 px-10 bg-[#fffdf5] min-h-screen">
+            <h1 className="text-2xl font-bold mb-4 text-[#364c84]">Product Showcase</h1>
 
             <input
                 type="text"
                 placeholder="Search products..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="border p-2 mb-4 w-full"
+                className="p-2 mb-5 w-full border-2 border-gray-100 rounded-lg bg-white text-gray-300"
             />
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-5">
                 {filteredProducts.map((product) => (
-                <div key={product.id} className="border p-4 rounded">
+                <div key={product.id} className="p-5 rounded-lg bg-white border-2 border-[#95b1ee]">
                     <img
                     src={product.image}
                     alt={product.title}
-                    className="h-32 mx-auto"
+                    className="h-32 mx-auto mb-9"
                     />
-                    <h2 className="font-semibold mt-2">{product.title}</h2>
+                    <h2 className="font-semibold mt-2 text-black">{product.title}</h2>
                     <Link href={`/products/${product.id}`}>
-                        <button className="bg-blue-500 text-white px-4 py-1 rounded mt-2">
+                        <button className="bg-[#e7f1a8] text-[#364c84] px-4 py-2 rounded-lg text-sm font-semibold mt-2">
                             View Details
                         </button>
                     </Link>
